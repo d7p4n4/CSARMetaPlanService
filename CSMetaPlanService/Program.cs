@@ -40,16 +40,14 @@ namespace CSMetaPlanService
                     }
                 });*/
 
-            SaveChangesMuveletResponse saveChangesMuveletResponse =
-                new ARMetaPlanCompositeServices().SaveChangesMuvelet(new SaveChangesMuveletRequest()
+            SaveChangesMuveletByGUIDResponse saveChangesMuveletResponse =
+                new ARMetaPlanCompositeServices().SaveChangesMuveletByGUID(new SaveChangesMuveletByGUIDRequest()
                 {
                     Muvelet = new Muvelet()
                     {
-                        Id = 5
-                        ,
                         GUID = "halandzsa"
                         ,
-                        ValaszTipus = 1
+                        ValaszTipus = 152
                     }
                 });
         }

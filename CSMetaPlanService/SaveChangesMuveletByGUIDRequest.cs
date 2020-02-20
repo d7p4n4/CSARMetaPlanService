@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace CSMetaPlanService
 {
-    public class UpdateMuveletByGUIDRequest : Ac4yServiceRequest
+    public class SaveChangesMuveletByGUIDRequest : Ac4yServiceRequest
     {
-        public Muvelet NewMuvelet { get; set; }
+        public Muvelet Muvelet { get; set; }
     }
 }

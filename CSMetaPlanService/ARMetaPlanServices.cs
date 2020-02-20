@@ -83,9 +83,9 @@ namespace CSMetaPlanService
             return response;
         }
 
-        public UpdateMuveletByIdResponse UpdateMuveletByGUID(UpdateMuveletByIdRequest request)
+        public UpdateMuveletByGUIDResponse UpdateMuveletByGUID(UpdateMuveletByGUIDRequest request)
         {
-            UpdateMuveletByIdResponse response = new UpdateMuveletByIdResponse();
+            UpdateMuveletByGUIDResponse response = new UpdateMuveletByGUIDResponse();
 
             try
             {

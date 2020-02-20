@@ -1,5 +1,4 @@
-﻿using CSARMetaPlan.Class;
-using Modul.Final.Class;
+﻿using Modul.Final.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSMetaPlanService
 {
-    public class UpdateMuveletByGUIDResponse : Ac4yServiceResponse
+    public class SaveChangesMuveletByGUIDResponse : Ac4yServiceResponse
     {
-
     }
 }

@@ -79,6 +79,8 @@
     <Compile Include="MuveletResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveChangesMuveletByGUIDRequest.cs" />
+    <Compile Include="SaveChangesMuveletByGUIDResponse.cs" />
     <Compile Include="SaveChangesMuveletRequest.cs" />
     <Compile Include="SaveChangesMuveletResponse.cs" />
     <Compile Include="SetMuveletRequest.cs" />

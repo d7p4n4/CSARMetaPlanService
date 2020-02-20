@@ -16,7 +16,7 @@ namespace CSMetaPlanService
             try
             {
                 IsExistMuveletByIdResponse isExistMuveletResponse =
-                    new ARMetaPlanServices().IsExistMuvelet(new IsExistMuveletByIdRequest()
+                    new ARMetaPlanServices().IsExistMuveletById(new IsExistMuveletByIdRequest()
                     {
                         Muvelet = request.Muvelet
                     });
@@ -24,7 +24,7 @@ namespace CSMetaPlanService
                 if (isExistMuveletResponse.IsExist)
                 {
                     UpdateMuveletByIdResponse updateMuveletResponse =
-                        new ARMetaPlanServices().UpdateMuvelet(new UpdateMuveletByIdRequest()
+                        new ARMetaPlanServices().UpdateMuveletById(new UpdateMuveletByIdRequest()
                         {
                             NewMuvelet = request.Muvelet
                         });
@@ -45,7 +45,44 @@ namespace CSMetaPlanService
             }
             return response;
         }
-        
+
+        public SaveChangesMuveletByGUIDResponse SaveChangesMuveletByGUID(SaveChangesMuveletByGUIDRequest request)
+        {
+            SaveChangesMuveletByGUIDResponse response = new SaveChangesMuveletByGUIDResponse();
+
+            try
+            {
+                IsExistMuveletByGUIDResponse isExistMuveletResponse =
+                    new ARMetaPlanServices().IsExistMuveletByGUID(new IsExistMuveletByGUIDRequest()
+                    {
+                        Muvelet = request.Muvelet
+                    });
+
+                if (isExistMuveletResponse.IsExist)
+                {
+                    UpdateMuveletByGUIDResponse updateMuveletResponse =
+                        new ARMetaPlanServices().UpdateMuveletByGUID(new UpdateMuveletByGUIDRequest()
+                        {
+                            NewMuvelet = request.Muvelet
+                        });
+                }
+                else
+                {
+                    MuveletResponse muveletResponse =
+                        new ARMetaPlanServices().SaveMuvelet(new MuveletRequest()
+                        {
+                            Muvelet = request.Muvelet
+                        });
+                }
+                response.Result = new Ac4yProcessResult() { Code = Ac4yProcessResult.SUCCESS };
+            }
+            catch (Exception exception)
+            {
+                response.Result = (new Ac4yProcessResult() { Code = Ac4yProcessResult.FAIL, Message = exception.Message, Description = exception.StackTrace });
+            }
+            return response;
+        }
+
 
         public SetMuveletResponse SetMuvelet(SetMuveletRequest request)
         {
