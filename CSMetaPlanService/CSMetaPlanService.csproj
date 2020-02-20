@@ -65,11 +65,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ARMetaPlanCompositeServices.cs" />
     <Compile Include="ARMetaPlanServices.cs" />
+    <Compile Include="GetByGUIDMuveletRequest.cs" />
+    <Compile Include="GetByGUIDMuveletResponse.cs" />
+    <Compile Include="GetByIdMuveletRequest.cs" />
+    <Compile Include="GetByIdMuveletResponse.cs" />
+    <Compile Include="IsExistMuveletByGUIDRequest.cs" />
+    <Compile Include="IsExistMuveletByGUIDResponse.cs" />
+    <Compile Include="IsExistMuveletByIdResponse.cs" />
+    <Compile Include="IsExistMuveletByIdRequest.cs" />
     <Compile Include="MuveletRequest.cs" />
     <Compile Include="MuveletResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveChangesMuveletRequest.cs" />
+    <Compile Include="SaveChangesMuveletResponse.cs" />
+    <Compile Include="SetMuveletRequest.cs" />
+    <Compile Include="SetMuveletResponse.cs" />
+    <Compile Include="UpdateMuveletByGUIDResponse.cs" />
+    <Compile Include="UpdateMuveletByGUIDResquest.cs" />
+    <Compile Include="UpdateMuveletByIdRequest.cs" />
+    <Compile Include="UpdateMuveletByIdResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
